@@ -1,4 +1,5 @@
 QT       += core gui
+QT += multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -23,4 +24,5 @@ HEADERS += \
     myqlineedit.h
 
 RESOURCES += \
-    translations.qrc
+    translations.qrc \
+    sounds.qrc

@@ -1,6 +1,8 @@
 #include "numbers123.h"
 #include <QDebug>
 #include <QThread>
+#include <QSound>
+#include <QMediaPlayer>
 
 Numbers123::Numbers123(QWidget *parent) : QWidget(parent){
     layoutV = new QVBoxLayout;
@@ -148,10 +150,14 @@ void Numbers123::handleModifiedAnsver(const QString &text){
     else if (number == 3)
         numberToCompare = hund;
 
-    if (text.toInt() == numberToCompare)
+    if (text.toInt() == numberToCompare){
         marks.push_front(1);
-    else
+        QSound::play(":/bell1.wav");
+    }
+    else {
         marks.push_front(0);
+        QSound::play(":/bell2.wav");
+    }
 
     runRectangles();
     getRundomNumbers();
