@@ -25,10 +25,10 @@ void Numbers123::initGeometry(){
     // -1- dealing with checkbox
     chBox = new QCheckBox;
     chBox->setChecked(false);
-    chBox->setMinimumSize(200, 30);
-    chBox->setMaximumSize(200, 30);
+    chBox->setMinimumSize(250, 39);
+    chBox->setMaximumSize(250, 39);
     chBox->setStyleSheet("QCheckBox::indicator { width:20px; height: 20px; }");
-    chBox->setText("Extra level");// harder level
+    chBox->setText(QObject::tr("Extra level"));// harder level
     QFont fAsk( "Arial", 20);
     chBox->setFont(fAsk);
     layoutH1->addWidget(chBox);
@@ -69,11 +69,11 @@ void Numbers123::initGeometry(){
 void Numbers123::runQuestionLine(){//qDebug() << "runQuestionLine";
     QString * midtext = new QString;
     if (number == 1)
-        midtext->append(" simple numbers here ");
+        midtext->append(QObject::tr(" simple numbers here "));
     else if (number == 2)
-        midtext->append(" decades here ");
+        midtext->append(QObject::tr(" decades here "));
     else if (number == 3)
-        midtext->append(" hundreds here ");
+        midtext->append(QObject::tr(" hundreds here "));
 
     QString * smallNumber = new QString;
     QString * longNumber = new QString;
@@ -87,7 +87,7 @@ void Numbers123::runQuestionLine(){//qDebug() << "runQuestionLine";
     smallNumber->append(QString::number(dec));
     smallNumber->append(QString::number(sn));
 
-    txtAsk->setText("How many");
+    txtAsk->setText(QObject::tr("How many"));
     txtAsk->setMargin(3);
     txtAsk->setStyleSheet("QLabel { background-color : lightblue;}");
     QFont fAsk( "Arial", 20);

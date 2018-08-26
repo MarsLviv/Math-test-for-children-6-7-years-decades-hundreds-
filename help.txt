@@ -1,0 +1,9 @@
+After compilation you may need copy these files to the same folder as your exe file:
+libgcc_s_dw2-1.dll
+libstdc++-6.dll
+libwinpthread-1.dll
+Qt5Core.dll
+Qt5Gui.dll
+Qt5Widgets.dll
+from C:\Qt\Qt5.10.1\5.10.1\xxx\bin (where xxx is the compiler version).
+Your Qt version may differ.

@@ -2,7 +2,7 @@
 #define MYQLINEEDIT_H
 #include <QLineEdit>
 
-/* need this class to get text in edit field selected after click in */
+/* need this class to get text in edit field selected after clicking  */
 
 class MyQLineEdit : public QLineEdit{
     Q_OBJECT

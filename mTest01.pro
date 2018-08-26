@@ -7,6 +7,8 @@ CONFIG += debug_and_release
 TARGET = mTest01
 TEMPLATE = app
 
+TRANSLATIONS = main_uk.ts
+
 DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
@@ -19,3 +21,6 @@ HEADERS += \
         mainwindow.h \
     numbers123.h \
     myqlineedit.h
+
+RESOURCES += \
+    translations.qrc
