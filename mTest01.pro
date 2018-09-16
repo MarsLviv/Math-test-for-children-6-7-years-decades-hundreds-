@@ -5,6 +5,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += debug_and_release
 
+DESTDIR = run
+
 TARGET = mTest01
 TEMPLATE = app
 
@@ -21,8 +23,11 @@ SOURCES += \
 HEADERS += \
         mainwindow.h \
     numbers123.h \
-    myqlineedit.h
+    myqlineedit.h \
+    resources.rc
 
 RESOURCES += \
     translations.qrc \
     sounds.qrc
+
+RC_FILE     = resources.rc
